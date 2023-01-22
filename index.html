@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>celsies to farenhit</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      body {
+        background-color: rgb(3, 16, 11);
+      }
+      .celsius {
+        background-color: aqua;
+        width: 55vw;
+        height: 55vh;
+        margin: auto;
+        text-align: center;
+        margin-top: 8vw;
+        border-radius: 10%;
+        padding: 4vw;
+      }
+      .celsius > div {
+        display: inline;
+        padding: 1vw;
+        color: rgb(229, 53, 26);
+        font-size: 4vh;
+        font-weight: bolder;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        text-transform: uppercase;
+      }
+
+      .input1 > input[type="number"] {
+        width: 20vw;
+        margin: 1vh;
+        background-color: blue;
+        border: 2px solid red;
+        border-radius: 10%;
+        height: 10vh;
+        padding: 1vw;
+        color: aliceblue;
+        font-size: 4vh;
+        font-weight: bolder;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .input2 > input[type="number"] {
+        font-weight: bolder;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        width: 15vw;
+        margin: 1vh;
+        background-color: blue;
+        border: 2px solid red;
+        border-radius: 10%;
+        height: 10vh;
+        padding: 1vw;
+        margin-left: 5vw;
+        color: aliceblue;
+        font-size: 4vh;
+      }
+      .btn {
+        /* font-weight: bolder; */
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        /* width:10vw; */
+        /* margin: 1vh; */
+        /* padding: 19vh; */
+        position: relative;
+        top: 7vh;
+        /* color: rgb(0, 0, 0); */
+        /* font-size: 4vh; */
+      }
+      button {
+        text-align: center;
+        font-weight: 900;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        width: 9vw;
+        font-size: 5vh;
+        color: #db0d0d;
+        background-color: blue;
+        padding: 20px;
+        padding-right: 11vw;
+        border-radius: 50%;
+      }
+      @media screen and (max-width:1200px) {
+        * {
+        padding: 0px;
+        margin: 0px;
+      }
+      body {
+        background-color:burlywood;
+      }
+      .celsius {
+    background-color: aqua;
+    width: 80vw;
+    height: 60vh;
+    margin: auto;
+    text-align: center;
+    margin-top: 25vw;
+    border-radius: 10%;
+    padding: 7vw;
+}
+.celsius > div {
+    margin-top: 1vh;
+    display: contents;
+    padding: 1vw;
+    color: rgb(3 16 11);
+    font-size: 3vh;
+    font-weight: bolder;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    text-transform: uppercase;
+}
+      
+
+      .input1 > input[type="number"] {
+        width: 71vw;
+        margin: 1vh;
+        background-color: blue;
+        border: 2px solid red;
+        border-radius: 10%;
+        height: 10vh;
+        padding: 1vw;
+        color: aliceblue;
+        font-size: 4vh;
+        font-weight: bolder;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .input2 > input[type="number"] {
+        font-weight: bolder;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        width: 72vw;
+        margin: 1vh;
+        background-color: blue;
+        border: 2px solid red;
+        border-radius: 10%;
+        height: 10vh;
+        padding: 1vw;
+        margin-left: 5vw;
+        color: aliceblue;
+        font-size: 4vh;
+      }
+      .btn {
+        /* font-weight: bolder; */
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        /* width:10vw; */
+        /* margin: 1vh; */
+        /* padding: 19vh; */
+        position: relative;
+        top: 7vh;
+        /* color: rgb(0, 0, 0); */
+        /* font-size: 4vh; */
+      }
+      button {
+        text-align: center;
+        font-weight: 900;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        width: 50vw;
+        font-size: 5vh;
+        color: #db0d0d;
+        background-color: blue;
+        padding: 20px;
+        padding-right: 11vw;
+        border-radius: 50%;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="celsius">
+      <div>Enter yout celsies value</div>
+      <div class="input1">
+        <input
+          type="number"
+          name="input1"
+          id="input1"
+          required
+          placeholder="Enter celsius value"
+        />
+      </div>
+      <br />
+      <div>farenhit value is</div>
+      <div class="input2">
+        <input
+          type="number"
+          id="input2"
+          placeholder="output section"
+          readonly
+        />
+      </div>
+      <br />
+      <div class="btn"><button onclick="forinhit()">clickhere</button></div>
+    </div>
+  </body>
+  <script>
+    function forinhit() {
+      var z;
+      z = document.getElementById("input1").value;
+      if (z == 0) {
+        alert("please eneter your value for input");
+      } else {
+        var farenhit;
+        farinhit = (z * 9) / 5 + 32;
+        document.getElementById("input2").value = farinhit;
+      }
+    }
+  </script>
+</html>
